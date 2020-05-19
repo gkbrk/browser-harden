@@ -1,0 +1,24 @@
+{
+  "manifest_version": 2,
+  "name": "Browser Harden",
+  "version": "1.2",
+  "description": "Remove JS clutter and improve your privacy",
+  "icons": {
+    "48": "icons/48.png"
+  },
+  "content_scripts": [
+    {
+      "matches": ["https://*/*", "http://*/*"],
+      "js": ["content.js"],
+      "all_frames": true,
+      "run_at": "document_start"
+    }
+  ],
+  "options_ui": {
+    "page": "options.html"
+  },
+  "permissions": ["storage", "webRequest", "webRequestBlocking", "<all_urls>"],
+  "background": {
+    "scripts": ["background.js"]
+  }
+}
