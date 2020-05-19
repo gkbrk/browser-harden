@@ -1,0 +1,18 @@
+[Project]
+- Add a readme to the repo
+- Add link to mozilla addon page
+
+[Build System]
+- Automatically update the manifest version with the current date
+
+[Extension]
+- Feature toggles for the background file
+- Feature overrides for domains / URL patterns
+- Export settings
+- Import settings
+
+[Features]
+- Hide scroll position
+- Disable fetch API
+- Disable XMLHttpRequest
+- Hide window focus events
