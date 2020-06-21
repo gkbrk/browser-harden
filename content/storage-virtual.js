@@ -14,7 +14,7 @@ Storage.prototype.getItem = function (name) {
   if (this == window.localStorage) {
     storage = storages.ls;
   } else {
-    storage = storage.ss;
+    storage = storages.ss;
   }
 
   return storage[name];
@@ -27,7 +27,7 @@ Storage.prototype.setItem = function (name, value) {
   if (this == window.localStorage) {
     storage = storages.ls;
   } else {
-    storage = storage.ss;
+    storage = storages.ss;
   }
 
   return (storage[name] = value);
