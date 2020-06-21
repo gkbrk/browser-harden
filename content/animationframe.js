@@ -4,8 +4,8 @@
 // desc Slow down the code ran by requestAnimationFrame
 
 Object.defineProperty(window, "requestAnimationFrame", {
-  get: () =>
-    function (cb) {
-      return setTimeout(cb, 100);
-    },
+  value: function (cb) {
+    return setTimeout(cb, 100);
+  },
+  writable: true,
 });
