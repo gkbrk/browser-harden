@@ -1,5 +1,5 @@
 const ua =
-  "Mozilla/5.0 (X11; Linux x86_64; rv:68.0) Gecko/20100101 Firefox/68.0";
+  "Mozilla/5.0 (X11; Linux x86_64; rv:88.0) Gecko/20100101 Firefox/88.0";
 
 function fixHeaders(e) {
   for (let header of e.requestHeaders) {

@@ -3,7 +3,7 @@
 // title Crypto API
 // desc Disable the Crypto API
 
-Object.defineProperty(window, "crypto", {
-  get: () => undefined,
-  enumerate: false,
-});
+Crypto.prototype.getRandomValues = function (arr) {
+  for (let i = 0; i < arr.length; i++) arr[i] = Math.random();
+  return arr;
+};

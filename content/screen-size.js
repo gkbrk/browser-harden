@@ -5,10 +5,10 @@
 
 Object.defineProperties(Screen.prototype, {
   width: {
-    get: () => 1280,
+    get: () => 1920,
   },
   height: {
-    get: () => 720,
+    get: () => 1080,
   },
   availTop: {
     get: () => 0,
@@ -17,9 +17,9 @@ Object.defineProperties(Screen.prototype, {
     get: () => 0,
   },
   availWidth: {
-    get: () => 1280,
+    get: () => 1920,
   },
   availHeight: {
-    get: () => 720,
+    get: () => 1080,
   },
 });

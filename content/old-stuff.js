@@ -30,18 +30,9 @@ Object.defineProperties(window, {
     get: () => idb,
   },
   fetch: {
-    get: () =>
-      function (url, params = undefined) {
-        console.log(`Fetch to ${url} with params ${params}`);
-        return origFetch.call(this, url, params);
-      },
-  },
-  AudioContext: {
-    get: () => undefined,
-    enumerate: false,
-  },
-  DynamicsCompressorNode: {
-    get: () => undefined,
-    enumerate: false,
+    value: function (url, params = undefined) {
+      console.log(`Fetch to ${url} with params ${params}`);
+      return origFetch.call(this, url, params);
+    },
   },
 });
