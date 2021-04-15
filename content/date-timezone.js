@@ -6,3 +6,9 @@
 Date.prototype.getTimezoneOffset = function () {
   return 0;
 };
+
+Intl.DateTimeFormat.prototype.resolvedOptions = function () {
+  return {
+    timeZone: "Europe/London",
+  };
+};
