@@ -1,9 +1,15 @@
 // name permissions.query
 // default true
-// title JS Cookies
-// desc Disable the creation and modification of cookies using JS
+// title Permissions
+// desc Never pop up permission dialogs and disable querying permissions
 
 // Make permissions time out
-Object.defineProperty(Permissions.prototype, "query", {
-  get: () => () => new Promise(() => {}),
-});
+
+const prompt = ["geolocation", "notifications", "push", "persistent-storage"];
+
+Permissions.prototype.query = function (o) {
+  if (prompt.indexOf(o.name) !== -1)
+    return Promise.resolve({ state: "prompt", onchange: null });
+
+  return Promise.reject(new TypeError());
+};
